@@ -27,9 +27,10 @@ class KittensController < ApplicationController
     end
 
     def update
+        @kitten = Kitten.find(params[:id])
         if @kitten.update(kitten_params)
             flash[:notice] = "Kitten updated."
-            render root
+            redirect_to root_path
         else
             flash[:alert] = "Unable to update."
             render :edit
@@ -37,9 +38,10 @@ class KittensController < ApplicationController
     end
 
     def destroy
+        @kitten = Kitten.find(params[:id])
         @kitten.destroy
         flash[:notice] = "Kitten deleted."
-        render root
+        redirect_to root_path
     end
 
     private

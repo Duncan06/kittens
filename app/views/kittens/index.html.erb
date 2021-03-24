@@ -9,7 +9,7 @@
   </thead>
 
   <tbody>
-    <%= @kittens.each do |kitten| %>
+    <% @kittens.each do |kitten| %>
     <tr>
         <td><%= kitten.name %></td>
         <td><%= link_to 'Show', kitten %></td>

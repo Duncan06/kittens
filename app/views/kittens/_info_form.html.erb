@@ -1,4 +1,4 @@
-<%= form_with(mdeol: kitten) do |f| %>
+<%= form_for @kitten do |f| %>
 
   <div>
     <%= f.label :name %>
@@ -20,3 +20,5 @@
   <%= f.submit %>
 
 <% end %>
+
+<%= link_to 'Main page', root_path %>
