@@ -1,0 +1,22 @@
+<h1>Kittens</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= @kittens.each do |kitten| %>
+    <tr>
+        <td><%= kitten.name %></td>
+        <td><%= link_to 'Show', kitten %></td>
+        <td><%= link_to 'Edit', edit_kitten_path(kitten) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Add Kitten', new_kitten_path %>

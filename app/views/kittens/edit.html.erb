@@ -1,0 +1,7 @@
+<h1>Edit a post</h1>
+
+<%= render "info_form", kitten: @kitten %>
+
+<%= link_to 'Main page', root_path %>
+
+<%= link_to 'Delete Kitten', @kitten, method: :delete, data: { confirm: 'Really delete kitten?' } %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h4>Name:</h4>
+  <%= @kitten.name %>
+</p>
+
+<p>
+  <h4>Age:</h4>
+  <%= @kitten.age %>
+</p>
+
+<p>
+  <h4>Cuteness:</h4>
+  <%= @kitten.cuteness %>
+</p>
+
+<p>
+  <h4>Softness:</h4>
+  <%= @kitten.softness %>
+</p>
+
+<%= link_to 'Main page', root_path %>
+<%= link_to 'Delete Kitten', @kitten, method: :delete, data: { confirm: 'Really delete kitten?' } %>
